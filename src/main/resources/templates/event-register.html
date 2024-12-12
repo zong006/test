@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-register.html</title>
+</head>
+<body>
+
+    <h1>event-register.html</h1>
+    <h1>Register for Event</h1>
+
+    <p>You have chosen to register for the following event: <strong th:text="${event.eventName}"></strong> on <strong th:text="${#dates.format(event.newDate, 'dd-MM-yyyy')}"></strong>.</p>
+
+    <form method="POST" th:action="@{/registration/register/{event-id}(event-id=${event.eventId})}" th:object="${registration}">
+
+        <div class="mb-3">
+            <label for "fullName">Full Name: </label>
+            <input type="text" name="fullName" th:field="*{fullName}" placeholder="Full Name">
+        </div>
+
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></div>
+
+        <div class="mb-3">
+            <label for "birthDate">Birth Date: </label>
+            <input type="date" name="birthDate" th:field="*{birthDate}" placeholder="Birth Date">
+        </div>
+
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"></div>
+
+        <div class="mb-3">
+            <label for "email">Email: </label>
+            <input type="text" name="email" th:field="*{email}" placeholder="Email">
+        </div>
+
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+        <div class="mb-3">
+            <label for "mobileNumber">Mobile Number: </label>
+            <input type="text" name="mobileNumber" th:field="*{mobileNumber}" placeholder="Mobile Number">
+        </div>
+
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}"></div>
+
+        <div class="mb-3">
+            <label for "numTicketsRequested">Number of Tickets: </label>
+            <input type="number" name="numTicketsRequested" th:field="*{numTicketsRequested}" placeholder="Number of Tickets">
+        </div>
+
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('numTicketsRequested')}" th:errors="*{numTicketsRequested}"></div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>

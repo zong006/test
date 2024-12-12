@@ -1,0 +1,8 @@
+vttp/ssf/assessment/eventmanagement/models/Event.class
+vttp/ssf/assessment/eventmanagement/EventmanagementApplication.class
+vttp/ssf/assessment/eventmanagement/repositories/RedisRepository.class
+vttp/ssf/assessment/eventmanagement/controllers/RegistrationController.class
+vttp/ssf/assessment/eventmanagement/models/Registration.class
+vttp/ssf/assessment/eventmanagement/services/DatabaseService.class
+vttp/ssf/assessment/eventmanagement/controllers/EventController.class
+vttp/ssf/assessment/eventmanagement/AppConfig.class

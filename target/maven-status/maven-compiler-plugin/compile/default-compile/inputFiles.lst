@@ -1,0 +1,8 @@
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/AppConfig.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/EventmanagementApplication.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/controllers/EventController.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/controllers/RegistrationController.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/models/Event.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/models/Registration.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/repositories/RedisRepository.java
+/Users/ongzhicong/Downloads/vttp5_ssf_b4_practiceAssessment-main/src/main/java/vttp/ssf/assessment/eventmanagement/services/DatabaseService.java

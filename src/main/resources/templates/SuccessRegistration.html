@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuccessRegistration.html</title>
+</head>
+<body>
+
+    <h1>SuccessRegistration.html</h1>
+    <h1>Success</h1>
+
+    <p>You have successfully registered for the event: </p>
+    <p><strong th:text="${event.eventName}"></strong></p>
+    <p><div th:text="${#dates.format(event.newDate, 'dd-MM-yyyy')}"></div></p>
+    
+</body>
+</html>

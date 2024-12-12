@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events-list.html</title>
+</head>
+<body>
+
+    <h1>events-list.html</h1>
+    <h1>List of Events</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Event ID</th>
+                <th>Event Name</th>
+                <th>Event Size</th>
+                <th>Event Date</th>
+                <th>Participants</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="event : ${events}">
+                <td th:text="${event.eventId}"></td>
+                <td th:text="${event.eventName}"></td>
+                <td th:text="${event.eventSize}"></td>
+                <!-- <td th:text="${event.eventDate}"></td> -->
+                <td th:text="${#dates.format(event.newDate, 'dd-MM-yyyy')}"></td>
+                <td th:text="${event.participants}"></td>
+                <td> <a th:href="@{/events/register/{event-id}(event-id=${event.eventId})}">Register</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</body>
+</html>
