@@ -19,7 +19,7 @@ public class EventController {
 
 	// Task 5
 	// get list of events
-	@GetMapping("/events/listing")
+	@GetMapping("/")
 	public String displayEvents(Model model) { 
 
 		// call service layer 
