@@ -47,41 +47,41 @@ public class AppConfig {
 
     }
 
-    // string, object RedisTemplate 
-    @Bean("redis-object")
-    public RedisTemplate<String, Object> createRedisTemplateObject() {
+    // // string, object RedisTemplate 
+    // @Bean("redis-object")
+    // public RedisTemplate<String, Object> createRedisTemplateObject() {
 
-        // create a database configuration
-        RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(redisHost, redisPort);
+    //     // create a database configuration
+    //     RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(redisHost, redisPort);
 
-        // sets the database --> select 0
-        config.setDatabase(redisDatabase);
+    //     // sets the database --> select 0
+    //     config.setDatabase(redisDatabase);
 
-        // set the username and password if they are set
-        if (!redisUsername.trim().equals("")) {
-            logger.info("Setting Redis username and password");
-            config.setUsername(redisUsername);
-            config.setPassword(redisPassword);
+    //     // set the username and password if they are set
+    //     if (!redisUsername.trim().equals("")) {
+    //         logger.info("Setting Redis username and password");
+    //         config.setUsername(redisUsername);
+    //         config.setPassword(redisPassword);
             
-        }
+    //     }
 
-        // create a connection to the database
-        JedisClientConfiguration jedisClient = JedisClientConfiguration.builder().build();
+    //     // create a connection to the database
+    //     JedisClientConfiguration jedisClient = JedisClientConfiguration.builder().build();
 
-        // create a factory to connect to Redis
-        JedisConnectionFactory jedisFac = new JedisConnectionFactory(config, jedisClient);
-        jedisFac.afterPropertiesSet();
+    //     // create a factory to connect to Redis
+    //     JedisConnectionFactory jedisFac = new JedisConnectionFactory(config, jedisClient);
+    //     jedisFac.afterPropertiesSet();
 
-        // create the RedisTemplate
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(jedisFac);
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        redisTemplate.setValueSerializer(new StringRedisSerializer());
-        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+    //     // create the RedisTemplate
+    //     RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+    //     redisTemplate.setConnectionFactory(jedisFac);
+    //     redisTemplate.setKeySerializer(new StringRedisSerializer());
+    //     redisTemplate.setValueSerializer(new StringRedisSerializer());
+    //     redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         
-        return redisTemplate;
+    //     return redisTemplate;
 
-    }
+    // }
 
     // string, string RedisTemplate
     @Bean("redis-string")
