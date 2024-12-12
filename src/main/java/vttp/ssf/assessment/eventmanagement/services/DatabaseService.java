@@ -36,8 +36,8 @@ public class DatabaseService {
         // list to hold events 
         List<Event> events = new ArrayList<>(); 
 
-        String path = "./data/" + fileName;
-        // // String path = fileName;
+        // String path = "./data/" + fileName;
+        String path = fileName;
 
         // // read "events.json" using a stream 
         // InputStream inputStream = getClass().getClassLoader().getResourceAsStream(path);
