@@ -9,7 +9,7 @@ COPY mvnw .
 COPY pom.xml .
 
 COPY .mvn .mvn
-COPY src /src/
+COPY src src
 
 # make mvnw executable 
 RUN chmod a+x mvnw && ./mvnw package -Dmaven.test.skip=true
