@@ -1,4 +1,4 @@
-package vttp.ssf.assessment.eventmanagement;
+package vttp.ssf.assessment.eventmanagement.config;
 
 import java.util.logging.Logger;
 
